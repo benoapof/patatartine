@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="78.796127"
+   height="177.90334"
+   id="svg3019"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="t.svg">
+  <defs
+     id="defs3021" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="-345.60194"
+     inkscape:cy="54.665954"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="511"
+     inkscape:window-height="415"
+     inkscape:window-x="372"
+     inkscape:window-y="412"
+     inkscape:window-maximized="0"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0" />
+  <metadata
+     id="metadata3024">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-720.60194,-409.1248)">
+    <g
+       transform="translate(438.19048,49.80965)"
+       style="font-size:74.07600403px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Trebuchet MS;-inkscape-font-specification:Trebuchet MS"
+       id="text2996">
+      <path
+         d="m 341.88565,359.31515 0,44.53241 19.1981,0 0,30.13588 -19.1981,0 -0.0926,62.355 c 0.0786,5.7932 3.03858,8.18114 8.35407,7.78529 l 11.06047,0.0641 -0.0362,32.99575 -22.85715,7.8e-4 c -26.99335,0.926 -35.92503,-17.16877 -36.43613,-32.85714 l 0,-70.34381 -19.46665,0 0,-30.13588 19.46665,0 0,-29.53241 z"
+         style="font-size:266.67364502px;font-weight:bold;font-family:AvantGardeMdITC;-inkscape-font-specification:AvantGardeMdITC Bold"
+         id="path3005"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccccccccccccccc" />
+    </g>
+  </g>
+</svg>
