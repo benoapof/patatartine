@@ -91,6 +91,7 @@ body {
 	<div class="titre">Todo</div>
 	<ul>
 		<li>Limiter à une seule ligne (mais quand même faire rentrer francois-guillaume comme prénom, je n'en connais pas mais c'est déjà pas mal long comme blaze...) Penser a marquer alerter l'utilisateur au cas ou il atteindrai la limite du nombre de caractères possible.</li>
+		<li><span class="stroke">Penser aux doigts lourds qui restent appuyé sur les touches...</span></li>
 		<li><span class="stroke">Empecher le copier/coller (javascript onpaste ?)</span></li>
 		<li><span class="stroke">Taille de texte proportionnelle</span> (Utilisation de l'unité vw)</li>
 		<li>Version imprimable (172mm x 62mm)</li>
@@ -113,6 +114,7 @@ body {
 	var libelleInit = "ton prénom";
 	var elemLibelle = document.getElementById('libelle');
 	var hauteur = elemLibelle.offsetHeight;
+	var unCara = true; // pour empècher l'appui long sur une touche'
 	elemLibelle.innerHTML = libelleInit;
 	elemLibelle.onfocus = function () {
 		if (this.innerHTML == libelleInit) {
@@ -127,6 +129,7 @@ body {
 		}
 	};
 	elemLibelle.onkeyup = function () {
+		unCara = true;
 		elemLibelle.className='libelle firstletter'; // bug webkit contenteditable::first-letter
 		this.removeAttribute('style');
 		if(this.innerHTML == "<br>")	// bug firefox ?
@@ -140,16 +143,26 @@ body {
 			var taille = 15;
 			do {
 				if (taille == 10) {
-					alert('Trop de texte, j\'peux pô ecrire plus petit');
-					break;
+console.log('Trop de texte, j\'peux pô ecrire plus petit');
 					elemLibelle.innerHTML = elemLibelle.innerHTML.substring(0,elemLibelle.innerHTML.length-1);
 					document.getElementsByTagName('audio')[0].play();
+					break;
 				}
 				this.style.fontSize = taille + "vw";
 				taille--;
 			}
 			while (elemLibelle.offsetHeight > hauteur)
 		}
+	};
+	elemLibelle.onkeydown = function (e) {
+		if (!unCara) {
+			e.preventDefault();
+		}
+		else
+			unCara= false;
+	};
+	elemLibelle.oninput = function () {
+//console.log ('gni inputevent : ' + elemLibelle.innerHTML);
 	};
 	elemLibelle.onkeypress = function (e) {
 		elemLibelle.className='libelle'; // bug webkit contenteditable::first-letter
@@ -161,11 +174,14 @@ body {
 	};
 // ajouter un faux placeholder
 function addFakePlaceholder () {
-	var fakeph = document.createElement('div');
-	fakeph.setAttribute('class','libelle fake firstletter'); // bug webkit contenteditable::first-letter
-	fakeph.setAttribute('id','fakePlaceholder');
-	fakeph.innerHTML = libelleInit;
-	document.getElementById('etiquette').insertBefore(fakeph,elemLibelle);
+	// seulement si il n'existe pas déjà
+	if(document.getElementById('fakePlaceholder') === null) {
+		var fakeph = document.createElement('div');
+		fakeph.setAttribute('class','libelle fake firstletter'); // bug webkit contenteditable::first-letter
+		fakeph.setAttribute('id','fakePlaceholder');
+		fakeph.innerHTML = libelleInit;
+		document.getElementById('etiquette').insertBefore(fakeph,elemLibelle);
+	};
 }
 // retire le faux placeholder
 function removeFakePlaceholder () {
